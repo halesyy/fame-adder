@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['prime.py'],
+a = Analysis(['AutoAdder.py'],
              pathex=['D:\\Projects\\Snaphame\\fame-adder'],
              binaries=[],
              datas=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='prime',
+          name='AutoAdder',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
