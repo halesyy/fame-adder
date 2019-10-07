@@ -27,7 +27,7 @@ def addName(name):
     # moves down 6 times, down 30 pixels (adjust for bigger/smaller movements)
     for i in range(6):
         pag.click()
-        moveDown(30)
+        moveDown(22)
     pag.moveTo(startedAt[0], startedAt[1], 1)
 
     doRefresh()
