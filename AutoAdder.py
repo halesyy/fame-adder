@@ -58,9 +58,9 @@ def moveLeft(px, time=0.5):
 # screen size
 def doRefresh():
     moveUp(45, 0.2)
-    moveLeft(230, 0.2)
+    moveLeft(250, 0.2)
     pag.click()
-    moveRight(230, 0.2)
+    moveRight(250, 0.2)
     pag.click()
 
 
