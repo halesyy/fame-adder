@@ -7,8 +7,7 @@ Use the power of community to get seen and help your career. A Snapchat auto-add
 ## Pre-requirements
 
 - A windows computer (raw Python works on Mac/Linux)
-- A phone which can simulate presses from Teamviewer QuickConnect (Android-tested)
--
+- A phone which can simulate presses from Teamviewer QuickConnect (Android-tested) with Snapchat installed and logged-in
 
 ## Quick install
 
