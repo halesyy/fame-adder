@@ -12,6 +12,7 @@ yourMessage = input("What do you want to paste into each chat?: ")
 if yourMessage == "":
     print("Set your message as the default..")
     yourMessage = "Hey there, (just added you from Snapfame). If you send my username to your friends, I'll do the same and boost your account on Snapfame (http://snapfa.me) :P"
+    # yourMessage = "Sorry for the spam message - I'm Jack, testing out a tool and you're one of the lucky people I added to test it from http://snapfa.me"
 
 print("\nWaiting for you to press 'enter' (for fame!)")
 while True:
@@ -62,7 +63,14 @@ def dragUp(px, time=0.5):
 
 pyperclip.copy(yourMessage)
 
-for i in range(5):
+timesDoingRightMove = 0
+
+def downRightAmount():
+    postBeforeDrag = pag.position()
+    dragUp(120, time=0.5)
+    pag.moveTo(postBeforeDrag[0], postBeforeDrag[1])
+
+for i in range(10):
     pag.click()
     time.sleep(1.5)
     pag.hotkey('ctrl', 'v')
@@ -70,19 +78,17 @@ for i in range(5):
     pag.press('enter')
     time.sleep(0.3)
     postBeforeDrag = pag.position()
-    dragLeft(200, time=0.4)
+    dragLeft(225, time=0.4)
     pag.moveTo(postBeforeDrag[0], postBeforeDrag[1])
     time.sleep(1)
     time.sleep(2)
-    # postBeforeDrag = pag.position()
-    # dragUp(150, time=0.5)
-    # pag.moveTo(postBeforeDrag[0], postBeforeDrag[1])
 
-# a short-cut to refreshing from the start position on certain
-# screen size
-def doRefresh():
-    moveUp(45, 0.2)
-    moveLeft(250, 0.2)
-    pag.click()
-    moveRight(250, 0.2)
-    pag.click()
+    # iterate this up, once it's over 3, stop doing the down right move
+    timesDoingRightMove += 1
+    if timesDoingRightMove <= 6:
+        downRightAmount()
+
+
+# downRightAmount()
+# time.sleep(2)
+# downRightAmount()
