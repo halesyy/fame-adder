@@ -72,18 +72,19 @@ def downRightAmount():
 
 while True:
     pag.click()
-    time.sleep(1.5)
+    time.sleep(0.5)
     pag.hotkey('ctrl', 'v')
-    time.sleep(0.3)
+    time.sleep(0.2)
     pag.press('enter')
-    time.sleep(0.3)
+    time.sleep(0.2)
     postBeforeDrag = pag.position()
     dragLeft(225, time=0.4)
     pag.moveTo(postBeforeDrag[0], postBeforeDrag[1])
-    time.sleep(1)
-    time.sleep(2)
+    time.sleep(0.5)
+    # time.sleep(2)
 
     # iterate this up, once it's over 3, stop doing the down right move
     timesDoingRightMove += 1
     if timesDoingRightMove <= 6:
         downRightAmount()
+        time.sleep(0.3)
