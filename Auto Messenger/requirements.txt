@@ -1,7 +1,0 @@
-pyautogui
-requests
-keyboard
-sys
-json
-time
-pyperclip
