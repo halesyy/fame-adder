@@ -6,6 +6,8 @@
 import pyautogui as pag
 import sys, json, requests, keyboard, time, random
 
+print("Customized Bot, from Jack Hales")
+
 try:
     namesFile = open("names.txt", "r")
 except:
@@ -77,8 +79,7 @@ def adder(name):
 print("About to infinitely run the adder - will cycle through your name list randomly\n\n")
 time.sleep(3)
 
-while True:
-    name = random.choice(names)
-    print("Adding {0}".format(name))
+for name in names:
+    print("Doing: {0}".format(name))
     adder(name)
     time.sleep(1)
